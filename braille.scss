@@ -968,6 +968,11 @@ div{
  /*   display: block; */
 }
 
+/* TEST: Mail fra Dawn 02.08.22 kl 15:30 */
+Figure.image + div[epub|type~='pagebreak]{
+        Margin-top: 1;
+}
+
 /* bruker epub:type for å skille mellom text-indent 0 og 2*/
 div[epub|type~='sidebar']
 {
