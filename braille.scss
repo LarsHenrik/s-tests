@@ -553,7 +553,7 @@ doctitle, h1[epub|type~='fulltitle'], h1[epub|type~='z3998:covertitle'], docauth
 /*                Text formatting                                             */
 /* -------------------------------------------------------------------------- */
 
-@text-transform strong {
+/*@text-transform strong {
     system: -nlb-indicators;
   
     open: "⠆";
@@ -577,7 +577,7 @@ doctitle, h1[epub|type~='fulltitle'], h1[epub|type~='z3998:covertitle'], docauth
     system: -nlb-indicators;
     open: "⠐⠂";
     close: "⠐⠂";
-}
+} */
 
 @if ($include-strong) {
     strong, b {
@@ -586,7 +586,7 @@ doctitle, h1[epub|type~='fulltitle'], h1[epub|type~='z3998:covertitle'], docauth
           /* NB! strong and em shall both have 23...56 */
           text-transform: -louis-italic;
             :root:not(:has(em, i)) & {
-                text-transform: em;
+                text-transform: -louis-italic;
             }
         } @else {
            /* text-transform: em; */
@@ -829,7 +829,7 @@ figure.image + p {
     margin-top: 1;
   }
 
-figure.image + div[epub|type~='pagebreak'] + p{
+  figure.image + div[epub|type~='pagebreak'] + p{
     margin-top: 1;
 }
 
@@ -891,7 +891,12 @@ sidebar, aside[epub|type~='sidebar'] p:first-child {
     border-bottom: ⠉;
     orphans: 3;
     widows: 3;
-   }
+}
+
+/* Mail fra Dawn 05.08.22 */
+aside[epub|type~='sidebar ramme bg-red'] {
+    orphans: 3;
+}
 
 epigraph, aside[epub|type~='epigraph'] {
     text-indent: 2;
@@ -969,11 +974,6 @@ div{
     margin-top: 1;
     margin-bottom: 1; 
  /*   display: block; */
-}
-
-/* TEST: Mail fra Dawn 02.08.22 kl 15:30 */
-Figure.image + div[epub|type~='pagebreak]{
-        Margin-top: 1;
 }
 
 /* bruker epub:type for å skille mellom text-indent 0 og 2*/
