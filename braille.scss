@@ -829,6 +829,10 @@ figure.image + p {
     margin-top: 1;
   }
 
+figure.image + li {
+    margin-top: 1;
+  }
+
   figure.image + div[epub|type~='pagebreak'] + p{
     margin-top: 1;
 }
