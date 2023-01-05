@@ -902,6 +902,14 @@ sidebar, aside[epub|type~='sidebar'] p:first-child {
     widows: 3;
 }
 
+.braille-aside-noindent{
+    margin-left: 0;
+    text-indent: 0;
+    text-align: left;
+    orphans: 3;
+    widows: 3;
+   }
+
 /* Mail fra Dawn 05.08.22 */
 aside[epub|type~='sidebar ramme bg-red'] {
     orphans: 3;
